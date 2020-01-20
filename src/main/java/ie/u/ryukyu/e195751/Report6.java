@@ -8,7 +8,7 @@ public class Report6 {
         int count = 0;
         junken x = new junken();
         try {
-            for (int v=0;v<5;v++) {
+            while (true) {
                 System.out.println("ジャンケン始めるぞー");
                 System.out.println("2でジャンケンはこれで最後。それ以外のボタンを押すと続けるよー");
                 System.out.println("それではボタンを押してください");
