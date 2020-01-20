@@ -2,7 +2,6 @@ package ie.u.ryukyu.e195751;
 
 import java.util.Random;
 import java.util.Scanner;
-import java.io.IOException;
 
 public class Report6 {
     public static void main(String args[]) {
@@ -137,22 +136,29 @@ class  Acchimuitehoi {
 
 
     void player1_win_pattern() {
-        System.out.println("ボタンを押してください");
-        Scanner scanner = new Scanner(System.in);
-        t = scanner.nextInt();
-        if (t == 0) {
-            System.out.println(array1[0]);
-            player1_patten = 0;
-        } else if (t == 1) {
-            System.out.println(array1[1]);
-            player1_patten = 1;
-        } else if (t == 2) {
-            System.out.println(array1[2]);
-            player1_patten = 2;
-        } else if (t == 3) {
-            System.out.println(array1[3]);
-            player1_patten = 3;
+        try {
+            System.out.println("ボタンを押してください");
+            Scanner scanner = new Scanner(System.in);
+            t = scanner.nextInt();
+            if (t == 0) {
+                System.out.println(array1[0]);
+                player1_patten = 0;
+            } else if (t == 1) {
+                System.out.println(array1[1]);
+                player1_patten = 1;
+            } else if (t == 2) {
+                System.out.println(array1[2]);
+                player1_patten = 2;
+            } else if (t == 3) {
+                System.out.println(array1[3]);
+                player1_patten = 3;
+            }
+        }catch (java.util.InputMismatchException x){
+            System.out.println("文字列が読み込めません");
+            System.out.println("もう一度やり直してください"); }
         }
+
+
 
         void player2_win_pattern(){
             Random random = new Random();
@@ -189,23 +195,26 @@ class  Acchimuitehoi {
             }
         }
 
-        void player1_lose_pattern(){
-            System.out.println("ボタンを押してください");
-            Scanner v = new Scanner(System.in);
-            k = v.nextInt();
-            if (k == 0) {
-                System.out.println(array2[0]);
-                player1_patten = 0;
-            } else if (k == 1) {
-                System.out.println(array2[1]);
-                player1_patten = 1;
-            } else if (k == 2) {
-                System.out.println(array2[2]);
-                player1_patten = 2;
-            } else if (k == 3) {
-                System.out.println(array2[3]);
-                player1_patten = 3;
-            }
+        void player1_lose_pattern() {
+            try {
+                System.out.println("ボタンを押してください");
+                Scanner v = new Scanner(System.in);
+                k = v.nextInt();
+                if (k == 0) {
+                    System.out.println(array2[0]);
+                    player1_patten = 0;
+                } else if (k == 1) {
+                    System.out.println(array2[1]);
+                    player1_patten = 1;
+                } else if (k == 2) {
+                    System.out.println(array2[2]);
+                    player1_patten = 2;
+                } else if (k == 3) {
+                    System.out.println(array2[3]);
+                    player1_patten = 3; }
+            }catch (java.util.InputMismatchException x){
+                System.out.println("文字列は読み込めません");
+                System.out.println("もう一度やり直してください"); }
         }
 
         void player1_win_and_player2_lose_judge () {
@@ -236,11 +245,9 @@ class  Acchimuitehoi {
             }
         }
 
-
-    }
-
-
 }
+
+
 
 
 
