@@ -38,7 +38,10 @@ class junken {
     int paper = 1; //1を出したらパー
     int scissors = 2; //2を出したらチョキ
 
-    //player1を定義
+    /**
+     * @param player1 自分のジャンケン
+     * @param player2 CPUのジャンケンの出し方
+     */
     int player1;
     int player2;
 
