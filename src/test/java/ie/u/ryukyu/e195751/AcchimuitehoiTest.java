@@ -4,11 +4,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 class AcchimuitehoiTest {
+    Acchimuitehoi v = new Acchimuitehoi();
 
     @Test
     void player1_win_pattern() {
+        int x =3;
+        v.player1_patten=3;
+        assertEquals(x,v.player1_patten);
     }
 
     @Test
@@ -17,7 +22,12 @@ class AcchimuitehoiTest {
 
     @Test
     void player2_lose_pattern() {
-    }
+       int t =0;
+       v.player1_patten=0;
+            assertEquals(t,v.player1_patten);
+        }
+
+
 
     @Test
     void player1_lose_pattern() {
@@ -25,16 +35,10 @@ class AcchimuitehoiTest {
 
     @Test
     void player1_win_and_player2_lose_judge() {
-        Acchimuitehoi n = new Acchimuitehoi();
-        n.player1_patten = 2;
-        n.player2_pattern = 2;
-        assertEquals(n.player1_patten,n.player2_pattern);
+
     }
     @Test
     void player1_lose_and_player2_win_judge() {
 
-            Acchimuitehoi k = new Acchimuitehoi();
-            k.player1_patten=1;
-            k.player2_pattern=1;
-            assertEquals(k.player1_patten,k.player2_pattern);
+
 }}
