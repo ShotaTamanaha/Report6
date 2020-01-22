@@ -38,10 +38,7 @@ class junken {
     int paper = 1; //1を出したらパー
     int scissors = 2; //2を出したらチョキ
 
-    /**
-     * @param player1 自分のジャンケン
-     * @param player2 CPUのジャンケンの出し方
-     */
+
     int player1;
     int player2;
 
@@ -52,7 +49,7 @@ class junken {
     public void decide_player1() {
         try {
             Scanner scan = new Scanner(System.in);
-            System.out.println("出力してください");
+            System.out.println("出力してください０でグー１でパー２でチョキ");
             int hand1 = scan.nextInt();
             switch (hand1){
                 case 0:
@@ -150,19 +147,12 @@ class junken {
 
 class  Acchimuitehoi {
 
-    /**
-     * @param array1 勝った時
-     * @param array2 負けた時
-     */
+
     String[] array1 = {"あっち向いてホイ➡️", "あっち向いてホイ⬅️", "あっち向いてホイ⬆️", "あっち向いてホイ⬇️"};
     String[] array2 = {"➡️", "⬅️", "⬆️️", "⬇️️"};
 
     int n, t, k, b;
 
-    /**
-     * @param player1_pattern プレイヤー１のあっち向いてホイ
-     * @param player2_pattern  プレイヤー2のあっち向いてホイ
-     */
     int player1_patten, player2_pattern;
 
     /**
@@ -170,7 +160,7 @@ class  Acchimuitehoi {
      */
     void player1_win_pattern() {
         try {
-            System.out.println("ボタンを押してください");
+            System.out.println("ボタンを押してください0だと▶️1だと⬅️2だと⬆️3だと⬇️");
             Scanner scanner = new Scanner(System.in);
             t = scanner.nextInt();
             if (t == 0) {
@@ -236,6 +226,9 @@ class  Acchimuitehoi {
      */
     void player1_lose_pattern() {
             try {
+                System.out.println("入力してください0だと▶️1だと⬅️2だと⬆️3だと⬇");
+               Scanner sc  = new Scanner(System.in);
+               k = sc.nextInt();
                 if (k==0){
                     System.out.println(array2[0]);
                     player1_patten=0;
