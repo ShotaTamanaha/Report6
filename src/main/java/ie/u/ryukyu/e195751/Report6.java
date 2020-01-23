@@ -7,8 +7,9 @@ public class Report6 {
     public static void main(String args[]) {
         int count = 0;
         junken x = new junken();
-        try {
-            while (true) {
+
+        while (true) {
+            try {
                 System.out.println("ジャンケン始めるぞー");
                 System.out.println("2でジャンケンはこれで最後。それ以外のボタンを押すと続けるよー");
                 System.out.println("それではボタンを押してください");
@@ -18,20 +19,20 @@ public class Report6 {
                     x.decide_player1();
                     x.decide_player2();
                     x.Judge();
-                    count += 1; }
-                else if (num == 2) {
+                    count += 1;
+                } else if (num == 2) {
                     System.out.println("終了！");
                     System.out.println("今回は" + count + "回あっち向いてホイをしました");
-                    break; }
+                    break;
+                }
+            } catch (java.util.InputMismatchException e) {
+                System.out.println(e.getMessage());
+                System.out.println("数字以外は出力できません。");
+                System.out.println("もう一度やり直してください");
             }
-        }catch (java.util.InputMismatchException e){
-            System.out.println(e.getMessage());
-            System.out.println("数字以外は出力できません。");
-            System.out.println("もう一度やり直してください");
         }
     }
 }
-
 
 class junken {
     int Rock = 0; //0を出したらグー
