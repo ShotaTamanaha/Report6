@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Report6 {
     public static void main(String args[]) {
         int count = 0;
-        junken x = new junken();
+        Junken junken = new Junken();
 
         while (true) {
             try {
@@ -16,9 +16,9 @@ public class Report6 {
                 Scanner a = new Scanner(System.in);
                 int num = a.nextInt();
                 if (num != 2) {
-                    x.decide_player1();
-                    x.decide_player2();
-                    x.Judge();
+                    junken.decide_player1();
+                    junken.decide_player2();
+                    junken.judge();
                     count += 1;
                 } else if (num == 2) {
                     System.out.println("終了！");
@@ -34,7 +34,7 @@ public class Report6 {
     }
 }
 
-class junken {
+class Junken {
     int Rock = 0; //0を出したらグー
     int paper = 1; //1を出したらパー
     int scissors = 2; //2を出したらチョキ
@@ -102,7 +102,7 @@ class junken {
      *  ジャンケンの判定とスコアの起動を決めるためのメソッド
      *  if文を使って勝ち、負け、引き分けについて考えた。
      */
-    public void Judge() {
+    public void judge() {
         Acchimuitehoi t = new Acchimuitehoi();
         if (player1 == scissors & player2 == scissors) {
             System.out.println("ジャンケンは引き分けです"); }
